@@ -21,7 +21,7 @@ p, a, ul, li, td, h1, h2, h3 {
 	<h1>나의 학적 조회</h1>
 
 	<div class="ex">
-		<table>
+		<table width="100%" cellpadding="5" cellspacing="0" border="0">
 			<tr>
 				<td><a
 					href="${pageContext.request.contextPath}/showCreditsOfSemester">학기별
