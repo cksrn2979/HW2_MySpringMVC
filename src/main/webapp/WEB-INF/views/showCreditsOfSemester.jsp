@@ -5,76 +5,88 @@
 <head>
 <title>Insert title here</title>
 </head>
-<style>
-div.ex {
-	width: 35%;
-	padding: 10px;
-	border: 5px solid grey;
-	margin: 20px
-}
-
-table td {
-	text-align: center;
-}
-
-p, a, ul, li, td, h1, h2, h3 {
-	font-size: 15px;
-	color: #000000;
-}
-
-h1 {
-	font-size: 20px;
-	font-weight: bold;
-	margin-top: 3px;
-}
-</style>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/main.css">
 <body>
-	<h1>학기별 학점 이수 조회</h1>
-	<div class="ex">
-		<table width="100%" cellpadding="5" cellspacing="0" border="0">
-			<tr>
-				<td>년도</td>
-				<td>학기</td>
-				<td>이수학점</td>
-				<td>상세보기</td>
-			</tr>
 
-			<tr>
-				<td>2011</td>
-				<td>1</td>
-				<td>${credits2011_1}</td>
-				<td>클릭</td>
-			</tr>
+	<font color="Marloon">학기별 학점 이수 조회</font>
+	<table cellspacing="1" cellpadding="3" border="0" bgcolor="#737373"  valign="top">
+		<tr>
+			<td bgcolor="#D0D8FF" width="70" align="center">년도</td>
+			<td bgcolor="#D0D8FF" width="50" align="center">학기</td>
+			<td bgcolor="#D0D8FF" width="50" align="center">이수학점</td>
+			<td bgcolor="#D0D8FF" width="80" align="center">상세보기</td>
+		</tr>
+		
+		
+		<tr>
+			<td bgcolor="#F5F5F5" align="center">2011</td>
+			<td bgcolor="#F5F5F5" align="center">1</td>
+			<td bgcolor="#F5F5F5" align="center">${credits2011_1}</td>
+			<td bgcolor="#F5F5F5" align="center">
+				<a href ="${pageContext.request.contextPath}/showSubjectsOfSemester?year=2011&semester=1">
+					<img src="${pageContext.request.contextPath}/resources/images/btnDetail.gif" />
+				</a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td bgcolor="#F5F5F5" align="center">2011</td>
+			<td bgcolor="#F5F5F5" align="center">2</td>
+			<td bgcolor="#F5F5F5" align="center">${credits2011_2}</td>
+			<td bgcolor="#F5F5F5" align="center">
+				<a href ="${pageContext.request.contextPath}/showSubjectsOfSemester?year=2011&semester=2">
+					<img src="${pageContext.request.contextPath}/resources/images/btnDetail.gif" />
+				</a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td bgcolor="#F5F5F5" align="center">2015</td>
+			<td bgcolor="#F5F5F5" align="center">1</td>
+			<td bgcolor="#F5F5F5" align="center">${credits2015_1}</td>
+			<td bgcolor="#F5F5F5" align="center">
+				<a href ="${pageContext.request.contextPath}/showSubjectsOfSemester?year=2015&semester=1">
+					<img src="${pageContext.request.contextPath}/resources/images/btnDetail.gif" />
+				</a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td bgcolor="#F5F5F5" align="center">2015</td>
+			<td bgcolor="#F5F5F5" align="center">2</td>
+			<td bgcolor="#F5F5F5" align="center">${credits2015_2}</td>
+			<td bgcolor="#F5F5F5" align="center">
+				<a href ="${pageContext.request.contextPath}/showSubjectsOfSemester?year=2015&semester=2">
+					<img src="${pageContext.request.contextPath}/resources/images/btnDetail.gif" />
+				</a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td bgcolor="#F5F5F5" align="center">2016</td>
+			<td bgcolor="#F5F5F5" align="center">1</td>
+			<td bgcolor="#F5F5F5" align="center">${credits2016_1}</td>
+			<td bgcolor="#F5F5F5" align="center">
+				<a href ="${pageContext.request.contextPath}/showSubjectsOfSemester?year=2016&semester=1">
+					<img src="${pageContext.request.contextPath}/resources/images/btnDetail.gif" />
+				</a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td bgcolor="#F5F5F5" align="center">2016</td>
+			<td bgcolor="#F5F5F5" align="center">2</td>
+			<td bgcolor="#F5F5F5" align="center">${credits2016_2}</td>
+			<td bgcolor="#F5F5F5" align="center">
+				<a href ="${pageContext.request.contextPath}/showSubjectsOfSemester?year=2016&semester=2">
+					<img src="${pageContext.request.contextPath}/resources/images/btnDetail.gif" />
+				</a>
+			</td>
+		</tr>
 
-			<tr>
-				<td>2011</td>
-				<td>2</td>
-				<td>${credits2011_2}</td>
-				<td>클릭</td>
-			</tr>
 
-
-			<tr>
-				<td>2015</td>
-				<td>1</td>
-				<td>${credits2015_2}</td>
-				<td>클릭</td>
-			</tr>
-
-			<tr>
-				<td>2016</td>
-				<td>1</td>
-				<td>${credits2016_1}</td>
-				<td>클릭</td>
-			</tr>
-
-			<tr>
-				<td>2016</td>
-				<td>2</td>
-				<td>${credits2016_2}</td>
-				<td>클릭</td>
-			</tr>
-		</table>
-	</div>
+	</table>
+	
 </body>
 </html>

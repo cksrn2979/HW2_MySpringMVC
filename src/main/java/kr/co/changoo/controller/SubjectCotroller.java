@@ -24,7 +24,18 @@ public class SubjectCotroller {
 		return subjectService;
 	}
 
-
+	
+	@RequestMapping(value="/showSubjectsOfSemester")
+	public String showSubjectsOfSemester(Model model,Subject subject){
+		String year=subject.getYear();
+		String semester=subject.getSemester();
+		
+		List<Subject> subjects=subjectService.getSubjectsBySemseter(year, semester);
+		model.addAttribute("subjects",subjects);
+		
+		return "showSubjectsOfSemester";
+	}
+	
 	@RequestMapping(value = "/showCreditsOfSemester")
 	public String showCreditsOfSemester(Model model) {
 

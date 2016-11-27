@@ -6,54 +6,32 @@
 <head>
 <title>Insert title here</title>
 </head>
-<style>
-div.ex {
-	width: 35%;
-	padding: 10px;
-	border: 5px solid grey;
-	margin: 20px
-}
-
-table td {
-	text-align: center;
-}
-
-p, a, ul, li, td, h1, h2, h3 {
-	font-size: 15px;
-	color: #000000;
-}
-
-h1 {
-	font-size: 20px;
-	font-weight: bold;
-	margin-top: 3px;
-}
-
-</style>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/main.css">
 <body>
 
-	<h1>구분별 학점 이수 조회</h>
-	<div class="ex">
-		<table width="100%" cellpadding="5" cellspacing="0" border="0">
-			<tr>
-				<td>교필</td>
-				<td>토대</td>
-				<td>인재</td>
-				<td>전기</td>
-				<td>전지</td>
-				<td>전선</td>
-			</tr>
+	<font color="Marloon">구분별 학점 이수 조회</font>
+	<table width="460"  cellspacing="1" cellpadding="3" border="0" bgcolor="#737373"  valign="top">
+		<tr>
 
-			<tr>
-				<td>${credits_basicliberalart}</td>
-				<td>${credits_liberalartA}</td>
-				<td>${credits_liberalartB}</td>
-				<td>${credits_basicMajor}</td>
-				<td>${credits_appointMajor}</td>
-				<td>${credits_selectMajor}</td>
-			</tr>
-		</table>
-	</div>
+			<td bgcolor="#D0D8FF" width="40" align="center">교필</td>
+			<td bgcolor="#D0D8FF" width="50" align="center">토대</td>
+			<td bgcolor="#D0D8FF" width="50" align="center">인재</td>
+			<td bgcolor="#D0D8FF" width="50" align="center">전기</td>
+			<td bgcolor="#D0D8FF" width="50" align="center">전지</td>
+			<td bgcolor="#D0D8FF" width="50" align="center">전선</td>
+		</tr>
+		<tr>
 
+			<td bgcolor="#F5F5F5" align="center">${credits_basicliberalart}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_liberalartA}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_liberalartB}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_basicMajor}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_appointMajor}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_selectMajor}</td>
+		</tr>
+
+
+	</table>
 </body>
 </html>
