@@ -9,7 +9,7 @@
 	href="${pageContext.request.contextPath}/resources/css/main.css">
 <body>
 
-	<font color="Marloon">학기별 학점 이수 조회</font>
+	<font class="maintext">학기별 학점 이수 조회</font>
 	<table cellspacing="1" cellpadding="3" border="0" bgcolor="#737373"  valign="top">
 		<tr>
 			<td bgcolor="#D0D8FF" width="80" align="center">년도</td>

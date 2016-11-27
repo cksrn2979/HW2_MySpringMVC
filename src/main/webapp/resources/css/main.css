@@ -1,16 +1,42 @@
 @CHARSET "UTF-8";
 
-.hometable{
-	border:1px solid gray;
+.hometable {
+	border: 1px solid gray;
 	margin: 30px;
 	padding: 30px;
-	font-size:small;
-	background-color:#e1e1ff;
+	font-size: small;
+	background-color: #e1e1ff;
 }
 
-.maintext{
-	color:blue;
+.et_text {
+	height: 20px;
+	margin-left: 10px;
 }
 
-body { font-family:굴림; font-size: 12px; color: #333333; }
-td {font-family:굴림; color:#6C6C6C; font-size: 12px; }
+.btn_submit {
+	margin-left: 10px;
+}
+
+.mainform{
+	width:350px;
+	margin: 30px;
+	border: 1px solid gray;
+	padding:30px
+}
+
+.error{
+	color:red;
+	margin-left:10px;
+}
+
+body {
+	font-family: 굴림;
+	font-size: 12px;
+	color: #333333;
+}
+
+td {
+	font-family: 굴림;
+	color: #6C6C6C;
+	font-size: 12px;
+}

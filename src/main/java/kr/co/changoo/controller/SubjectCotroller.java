@@ -59,19 +59,19 @@ public class SubjectCotroller {
 	@RequestMapping(value = "/showCreditsOfDivision")
 	public String showCreditsOfDivision(Model model) {
 
-		Integer credits_basicliberalart=subjectService.getCreditsByDivision("교필");
-		Integer credits_liberalartA=subjectService.getCreditsByDivision("토대");
-		Integer credits_liberalartB=subjectService.getCreditsByDivision("인재");
-		Integer credits_basicMajor=subjectService.getCreditsByDivision("전기");
-		Integer credits_appointMajor=subjectService.getCreditsByDivision("전지");
-		Integer credits_selectMajor=subjectService.getCreditsByDivision("전선");
+		Integer credits_kyopil=subjectService.getCreditsByDivision("교필");
+		Integer credits_todae=subjectService.getCreditsByDivision("토대");
+		Integer credits_injae=subjectService.getCreditsByDivision("인재");
+		Integer credits_jungi=subjectService.getCreditsByDivision("전기");
+		Integer credits_junzi=subjectService.getCreditsByDivision("전지");
+		Integer credits_junsun=subjectService.getCreditsByDivision("전선");
 		
-		model.addAttribute("credits_basicliberalart",credits_basicliberalart);
-		model.addAttribute("credits_liberalartA",credits_liberalartA);
-		model.addAttribute("credits_liberalartB",credits_liberalartB);
-		model.addAttribute("credits_basicMajor",credits_basicMajor);
-		model.addAttribute("credits_appointMajor",credits_appointMajor);
-		model.addAttribute("credits_selectMajor",credits_selectMajor);
+		model.addAttribute("credits_kyopil",credits_kyopil);
+		model.addAttribute("credits_todae",credits_todae);
+		model.addAttribute("credits_injae",credits_injae);
+		model.addAttribute("credits_jungi",credits_jungi);
+		model.addAttribute("credits_junzi",credits_junzi);
+		model.addAttribute("credits_junsun",credits_junsun);
 		
 		return "showCreditsOfDivision";
 	}

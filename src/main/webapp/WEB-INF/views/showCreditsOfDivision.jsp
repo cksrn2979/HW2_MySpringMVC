@@ -10,8 +10,9 @@
 	href="${pageContext.request.contextPath}/resources/css/main.css">
 <body>
 
-	<font color="Marloon">구분별 학점 이수 조회</font>
-	<table width="460"  cellspacing="1" cellpadding="3" border="0" bgcolor="#737373"  valign="top">
+	<font class="maintext">구분별 학점 이수 조회</font>
+	<table width="460" cellspacing="1" cellpadding="3" border="0"
+		bgcolor="#737373" valign="top">
 		<tr>
 
 			<td bgcolor="#D0D8FF" width="40" align="center">교필</td>
@@ -23,14 +24,13 @@
 		</tr>
 		<tr>
 
-			<td bgcolor="#F5F5F5" align="center">${credits_basicliberalart}</td>
-			<td bgcolor="#F5F5F5" align="center">${credits_liberalartA}</td>
-			<td bgcolor="#F5F5F5" align="center">${credits_liberalartB}</td>
-			<td bgcolor="#F5F5F5" align="center">${credits_basicMajor}</td>
-			<td bgcolor="#F5F5F5" align="center">${credits_appointMajor}</td>
-			<td bgcolor="#F5F5F5" align="center">${credits_selectMajor}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_kyopil}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_todae}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_injae}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_jungi}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_junzi}</td>
+			<td bgcolor="#F5F5F5" align="center">${credits_junsun}</td>
 		</tr>
-
 
 	</table>
 </body>
