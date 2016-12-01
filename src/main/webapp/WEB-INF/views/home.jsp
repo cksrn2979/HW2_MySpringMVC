@@ -11,13 +11,13 @@
 <body>
 	<table class="hometable">
 		<tr>
-			<td><a href="${pageContext.request.contextPath}/showCreditsOfSemester">학기별이수 학점 조회 </a></td>
+			<td><a href="${pageContext.request.contextPath}/showCreditsOfSemester">학기별 이수 학점 조회 </a></td>
 		</tr>
 		<tr>
-			<td><a href="${pageContext.request.contextPath}/showCreditsOfDivision">이수 구분별 학점 조회 </a></td>
+			<td><a href="${pageContext.request.contextPath}/showCreditsOfDivision">구분별 이수 학점 조회 </a></td>
 		</tr>
 		<tr>			
-			<td><a href="${pageContext.request.contextPath}/addPreferSubject">선호 교과목 사전 수강 신청하기</a>
+			<td><a href="${pageContext.request.contextPath}/createPreferSubject">선호 교과목 사전 수강 신청하기</a>
 			</td>
 		</tr>
 		

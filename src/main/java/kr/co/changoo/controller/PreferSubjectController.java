@@ -27,21 +27,21 @@ public class PreferSubjectController {
 		return preferSubjectService;
 	}
 
-	@RequestMapping(value = "/addPreferSubject")
+	@RequestMapping(value = "/createPreferSubject")
 	public String addPreferSubject(Model model) {
 		model.addAttribute("preferSubject", new PreferSubject());
-		return "addPreferSubject";
+		return "createPreferSubject";
 	}
 
-	@RequestMapping(value = "/requestPreferSubject")
+	@RequestMapping(value = "/doCreatePreferSubject")
 	public String addPreferSubejct(Model model, @Valid PreferSubject preferSubject, BindingResult result) {
 		if (result.hasErrors()) {
-			return "addPreferSubject";
+			return "createPreferSubject";
 		}
 
 		preferSubjectService.insert(preferSubject);
 
-		return "addedPreferSubject";
+		return "createdPreferSubject";
 	}
 	
 	@RequestMapping(value ="/showPreferSubjects")

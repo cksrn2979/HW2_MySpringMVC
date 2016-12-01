@@ -1,6 +1,9 @@
 package kr.co.changoo.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,8 +30,8 @@ public class SubjectCotroller {
 	
 	@RequestMapping(value="/showSubjectsOfSemester")
 	public String showSubjectsOfSemester(Model model,Subject subject){
-		String year=subject.getYear();
-		String semester=subject.getSemester();
+		int year=subject.getYear();
+		int semester=subject.getSemester();
 		
 		List<Subject> subjects=subjectService.getSubjectsBySemseter(year, semester);
 		model.addAttribute("subjects",subjects);
@@ -38,21 +41,24 @@ public class SubjectCotroller {
 	
 	@RequestMapping(value = "/showCreditsOfSemester")
 	public String showCreditsOfSemester(Model model) {
-
-		Integer credits2011_1=subjectService.getCreditsBySemetser("2011","1");
-		Integer credits2011_2=subjectService.getCreditsBySemetser("2011","2");
-		Integer credits2015_1=subjectService.getCreditsBySemetser("2015","1");
-		Integer credits2015_2=subjectService.getCreditsBySemetser("2015","2");
-		Integer credits2016_1=subjectService.getCreditsBySemetser("2016","1");
-		Integer credits2016_2=subjectService.getCreditsBySemetser("2016","2");
+		int enterYear=2011;
+		int currentYear=2016;
 		
-		model.addAttribute("credits2011_1",credits2011_1);
-		model.addAttribute("credits2011_2",credits2011_2);
-		model.addAttribute("credits2015_1",credits2015_1);
-		model.addAttribute("credits2015_2",credits2015_2);
-		model.addAttribute("credits2016_1",credits2016_1);
-		model.addAttribute("credits2016_2",credits2016_2);
+		ArrayList<Integer> years=new ArrayList<>();
+		for(int i=enterYear; i<=currentYear;i++)
+			years.add(i);
 		
+		ArrayList<Subject> creditsList=new ArrayList<>();
+		
+		for(Integer year: years)
+			for(Integer semester=1; semester<=2; semester++){
+				if(subjectService.getCreditsBySemetser(year, semester)!=null){
+					Subject credits=subjectService.getCreditsBySemetser(year, semester);
+					creditsList.add(credits);				
+				}
+			}
+		
+		model.addAttribute("creditsList",creditsList);
 		return "showCreditsOfSemester";
 	}
 

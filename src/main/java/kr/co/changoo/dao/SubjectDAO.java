@@ -22,40 +22,32 @@ public class SubjectDAO {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
-	public List<Subject> getSubjectsByYear(String year){
-		String str="select * from subjects where 수강년도=?";
-		return jdbcTemplate.query(str, new Object[]{year},new SubjectMapper());
+	public List<Subject> getSubjectsBySemester(int year, int semester) {
+		String str = "select * from subjects where 수강년도=? and 학기=?";
+		return jdbcTemplate.query(str, new Object[] { year, semester }, new SubjectMapper());
 	}
 
-	public List<Subject> getSubjectsBySemester(String year, String semester){
-		String str="select * from subjects where 수강년도=? and 학기=?";
-		return jdbcTemplate.query(str, new Object[]{year,semester},new SubjectMapper());
+	public List<Subject> getSubjectsByDivision(String division) {
+		String str = "select * from subjects where 구분=?";
+		return jdbcTemplate.query(str, new Object[] { division }, new SubjectMapper());
 	}
 
+	public Integer getCreditsByDivision(String division) {
+		String str = "select sum(학점) from subjects where 구분=?";
+		return jdbcTemplate.queryForObject(str, new Object[] { division }, Integer.class);
+	}
 
-	public List<Subject> getSubjectsByDivision(String division){
-		String str="select * from subjects where 구분=?";
-		return jdbcTemplate.query(str, new Object[]{division},new SubjectMapper());
+	public Integer getCreditsBySemester(int year, int semester) {
+		String str = "select sum(학점) from subjects where 수강년도=? and 학기=?";
+		return jdbcTemplate.queryForObject(str, new Object[] { year, semester }, Integer.class);
 	}
-	
-	public Integer getCreditsByDivision(String division){
-		String str="select sum(학점) from subjects where 구분=?";
-		return jdbcTemplate.queryForObject(str, new Object[]{division},Integer.class);
-	}
-	
-	public Integer getCreditsBySemester(String year,String semester){
-		String str="select sum(학점) from subjects where 수강년도=? and 학기=?";
-		return jdbcTemplate.queryForObject(str, new Object[]{year,semester},Integer.class);
-	}
-	
-	
 
 	class SubjectMapper implements RowMapper<Subject> {
 		@Override
 		public Subject mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Subject subject = new Subject();
-			subject.setYear(rs.getString("수강년도"));
-			subject.setSemester(rs.getString("학기"));
+			subject.setYear(rs.getInt("수강년도"));
+			subject.setSemester(rs.getInt("학기"));
 			subject.setDivision(rs.getString("구분"));
 			subject.setSubjectcode(rs.getString("교과코드"));
 			subject.setSubjectname(rs.getString("교과목명"));

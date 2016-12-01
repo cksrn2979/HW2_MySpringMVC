@@ -17,17 +17,23 @@ public class SubjectService {
 	public void setCreditDAO(SubjectDAO subjectDAO) {
 		this.subjectDAO = subjectDAO;
 	}
-	
-	
-	public List<Subject> getSubjectsBySemseter(String year, String semester){
+
+	public List<Subject> getSubjectsBySemseter(int year, int semester) {
 		return subjectDAO.getSubjectsBySemester(year, semester);
 	}
-	
-	public Integer getCreditsBySemetser(String year,String semester){
-		return subjectDAO.getCreditsBySemester(year, semester);		
+
+	public Subject getCreditsBySemetser(int year, int semester) {
+		if (subjectDAO.getCreditsBySemester(year, semester) != null) {
+			Subject credits = new Subject();
+			credits.setCredit(subjectDAO.getCreditsBySemester(year, semester));
+			credits.setYear(year);
+			credits.setSemester(semester);
+			return credits;
+		}
+		return null;
 	}
-	
-	public Integer getCreditsByDivision(String division){
-		return subjectDAO.getCreditsByDivision(division);		
+
+	public Integer getCreditsByDivision(String division) {
+		return subjectDAO.getCreditsByDivision(division);
 	}
 }

@@ -2,8 +2,8 @@ package kr.co.changoo.model;
 
 public class Subject {
 
-	private String year;
-	private String semester;
+	private int year;
+	private int semester;
 	private String subjectcode;
 	private String subjectname;
 	private String division;
@@ -13,7 +13,7 @@ public class Subject {
 
 	}
 
-	public Subject(String year, String semester, String subjectcode, String subjectname, String division,
+	public Subject(int year, int semester, String subjectcode, String subjectname, String division,
 			Integer credit) {
 		this.year = year;
 		this.semester = semester;
@@ -29,19 +29,19 @@ public class Subject {
 				+ subjectname + ", division=" + division + ", credit=" + credit + "]";
 	}
 
-	public String getYear() {
+	public int getYear() {
 		return year;
 	}
 
-	public void setYear(String year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 
-	public String getSemester() {
+	public int getSemester() {
 		return semester;
 	}
 
-	public void setSemester(String semester) {
+	public void setSemester(int semester) {
 		this.semester = semester;
 	}
 

@@ -10,7 +10,8 @@
 	href="${pageContext.request.contextPath}/resources/css/main.css">
 <body>
 
-	<font class="maintext">구분별 학점 이수 조회</font>
+	구분별 이수 학점 조회
+	
 	<table width="460" cellspacing="1" cellpadding="3" border="0"
 		bgcolor="#737373" valign="top">
 		<tr>

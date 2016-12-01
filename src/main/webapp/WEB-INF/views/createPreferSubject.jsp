@@ -9,9 +9,9 @@
 	href="${pageContext.request.contextPath}/resources/css/main.css">
 <body>
 	<form:form class="mainform" method="get"
-		action="${pageContext.request.contextPath}/requestPreferSubject"
+		action="${pageContext.request.contextPath}/doCreatePreferSubject"
 		modelAttribute="preferSubject">
-		<h3>선호 과목 수강신청</h3>
+		<h3>선호 과목 사전 수강신청</h3>
 		<table>
 			<tr>
 				<td>과목코드</td>
