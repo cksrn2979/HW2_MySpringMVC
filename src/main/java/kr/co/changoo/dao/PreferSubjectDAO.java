@@ -26,7 +26,7 @@ public class PreferSubjectDAO {
 		String sql="insert into prefersubjects value (?,?,?,?);";
 		String subjectcode=prefersubject.getSubjectcode();
 		String subjectname=prefersubject.getSubjectname();
-		String division=prefersubject.getSubjectcode();
+		String division=prefersubject.getDivision();
 		Integer credit=prefersubject.getCredit();
 		return jdbcTemplate.update(sql,new Object[]{subjectcode,subjectname,division,credit})==1;		
 	}
