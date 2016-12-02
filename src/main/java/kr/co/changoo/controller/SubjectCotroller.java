@@ -48,13 +48,13 @@ public class SubjectCotroller {
 		for(int i=enterYear; i<=currentYear;i++)
 			years.add(i);
 		
-		ArrayList<Subject> creditsList=new ArrayList<>();
+		ArrayList<Integer[]> creditsList=new ArrayList<>();
 		
 		for(Integer year: years)
 			for(Integer semester=1; semester<=2; semester++){
 				if(subjectService.getCreditsBySemetser(year, semester)!=null){
-					Subject credits=subjectService.getCreditsBySemetser(year, semester);
-					creditsList.add(credits);				
+					int credits=subjectService.getCreditsBySemetser(year, semester);					
+					creditsList.add(new Integer[]{year,semester,credits});				
 				}
 			}
 		

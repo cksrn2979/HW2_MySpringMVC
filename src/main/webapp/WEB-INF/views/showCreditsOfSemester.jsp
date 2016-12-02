@@ -21,9 +21,9 @@
 		</tr>
 
 		<c:forEach var="credits" items="${creditsList}">
-			<c:set var="year" value="${credits.year}" />
-			<c:set var="semester" value="${credits.semester}" />
-			<c:set var="credits" value="${credits.credit}" />
+			<c:set var="year" value="${credits[0]}" />
+			<c:set var="semester" value="${credits[1]}" />
+			<c:set var="credits" value="${credits[2]}" />
 			<tr>
 				<td bgcolor="#F5F5F5" align="center">${year}</td>
 				<td bgcolor="#F5F5F5" align="center">${semester}</td>

@@ -22,15 +22,8 @@ public class SubjectService {
 		return subjectDAO.getSubjectsBySemester(year, semester);
 	}
 
-	public Subject getCreditsBySemetser(int year, int semester) {
-		if (subjectDAO.getCreditsBySemester(year, semester) != null) {
-			Subject credits = new Subject();
-			credits.setCredit(subjectDAO.getCreditsBySemester(year, semester));
-			credits.setYear(year);
-			credits.setSemester(semester);
-			return credits;
-		}
-		return null;
+	public Integer getCreditsBySemetser(int year, int semester) {
+		return subjectDAO.getCreditsBySemester(year, semester);
 	}
 
 	public Integer getCreditsByDivision(String division) {
